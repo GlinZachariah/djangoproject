@@ -7,7 +7,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
+    context ={
+        'title': 'App1'
+    }
+    return render(request,'index.html',context)
 
-    return render(request,'index.html',{
-        'title':'App 1'
-    })
